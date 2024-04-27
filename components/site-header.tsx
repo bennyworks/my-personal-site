@@ -14,6 +14,7 @@ export function SiteHeader() {
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
+            {/*
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -44,6 +45,7 @@ export function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
+            */}
             <ModeToggle />
             <MobileNav />
           </nav>

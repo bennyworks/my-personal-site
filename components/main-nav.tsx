@@ -21,7 +21,7 @@ export function MainNav() {
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        Blog
+        文章
       </Link>
       <Link
         href="/about"
@@ -30,7 +30,7 @@ export function MainNav() {
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        About
+        关于
       </Link>
     </nav>
   );
