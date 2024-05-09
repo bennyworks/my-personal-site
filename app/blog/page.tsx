@@ -48,7 +48,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           {displayPosts?.length > 0 ? (
             <ul className="flex flex-col">
               {displayPosts.map((post) => {
-                const { slug, date, title, description, tags } = post;
+                const { slug, date, title, description, tags, cover } = post;
                 return (
                   <li key={slug}>
                     <PostItem
@@ -57,6 +57,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       title={title}
                       description={description}
                       tags={tags}
+                      cover={cover}
                     />
                   </li>
                 );
@@ -72,7 +73,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </div>
         <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
           <CardHeader>
-            <CardTitle>Tags</CardTitle>
+            <CardTitle>标签</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
             {sortedTags?.map((tag) => (

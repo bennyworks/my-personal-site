@@ -10,6 +10,7 @@ interface PostItemProps {
   description?: string;
   date: string;
   tags?: Array<string>;
+  cover?: string;
 }
 
 export function PostItem({
@@ -18,6 +19,7 @@ export function PostItem({
   description,
   date,
   tags,
+  cover,
 }: PostItemProps) {
   return (
     <article className="flex flex-col gap-2 border-border border-b py-3">
@@ -32,6 +34,7 @@ export function PostItem({
         ))}
       </div>
       <div className="max-w-none text-muted-foreground">{description}</div>
+      <div>{cover ? <img src={cover} alt="" /> : null}</div>
       <div className="flex justify-between items-center">
         <dl>
           <dt className="sr-only">Published On</dt>
@@ -44,7 +47,7 @@ export function PostItem({
           href={"/" + slug}
           className={cn(buttonVariants({ variant: "link" }), "py-0")}
         >
-          Read more →
+          阅读 →
         </Link>
       </div>
     </article>
